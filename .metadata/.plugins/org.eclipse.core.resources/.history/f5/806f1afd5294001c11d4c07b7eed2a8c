@@ -1,0 +1,13 @@
+@desafio
+Feature: Realizar pesquisa de elemento conhecido
+  I want to use this template for my feature file
+
+  @01
+  Scenario: Title of your scenario
+    Given usuario esta na pagina inicial
+    When usuario clica na lupa de pesquisa
+    And usuario preenche o campo para pesquisa
+    And usuario clica em pesquisar
+    Then valido que o elemento da pesquisa foi localizado
+   
+

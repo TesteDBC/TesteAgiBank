@@ -1,0 +1,13 @@
+
+@desafio
+Feature: Title of your feature
+  I want to use this template for my feature file
+
+  @01
+  Scenario: Realizar pesquisa para elemento encontrado no site
+    Given usuario esta na pagina inicial
+    And some other precondition
+    When usuario clica na lupa
+    And usuario preenche o campo de pesquisas
+    And usuario clica em pesquisar
+    Then valido que o elemento foi encontrado

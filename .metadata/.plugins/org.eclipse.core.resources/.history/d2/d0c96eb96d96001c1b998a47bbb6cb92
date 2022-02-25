@@ -1,0 +1,30 @@
+package logics;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
+public class RealizarPesqNegativaLogics {
+	
+	WebDriver driver;
+	WebDriverWait wait;
+	
+	public RealizarPesqNegativaLogics (WebDriver driver) {
+		this.driver = driver;
+	}
+	
+	public void usuario_acessa_busca() {
+		
+		
+	}
+	
+	public void usuario_preenche_invalido() {
+	}
+	
+	public void usuario_pesquisa() {
+	}
+	
+	public void valido_erro() {
+		
+	}
+	
+}

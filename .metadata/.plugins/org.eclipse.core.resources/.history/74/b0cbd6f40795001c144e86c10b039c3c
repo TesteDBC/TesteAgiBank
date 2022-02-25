@@ -1,0 +1,45 @@
+package steps;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import io.cucumber.java.en.*;
+import logics.RealizarPesqPositivaLogics;
+
+public class RealizarPesqPositivaSteps {
+	WebDriver driver;
+	
+	RealizarPesqPositivaLogics realizarlogics;
+	
+	public RealizarPesqPositivaSteps () {
+		realizarlogics = new RealizarPesqPositivaLogics(driver);
+	}
+	
+	
+	@Given("usuario esta na pagina inicial")
+	public void usuario_esta_na_pagina_inicial() {
+		System.setProperty("webdriver.chrome.driver", "src/test/resources/drivers/chromedriver.exe");
+	    driver = new ChromeDriver();
+	    driver.navigate().to("https://blogdoagi.com.br/");
+	}
+
+	@When("usuario clica na lupa")
+	public void usuario_clica_na_lupa() {
+	    realizarlogics.usuario_clica_lupa();
+	}
+
+	@When("usuario preenche o campo de pesquisas com financas conhecido")
+	public void usuario_preenche_o_campo_de_pesquisas_com_finan_as_conhecido() {
+	   realizarlogics.usuario_preenche_positivo();
+	}
+
+	@When("usuario clica em pesquisar")
+	public void usuario_clica_em_pesquisar() {
+	   realizarlogics.usuario_clica_pesquisar();
+	}
+
+	@Then("valido que o elemento foi encontrado")
+	public void valido_que_o_elemento_foi_encontrado() {
+	    
+	}
+
+}

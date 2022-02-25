@@ -1,0 +1,47 @@
+package logics;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
+import junit.framework.Assert;
+
+
+
+
+public class RealizarPesqPositivaLogics {
+	
+	WebDriver driver;
+	WebDriverWait wait;
+	
+	public RealizarPesqPositivaLogics (WebDriver driver) {
+		this.driver = driver;
+	}
+	
+	public void usuario_clica_lupa () throws InterruptedException {
+		Thread.sleep(3000);
+		driver.findElement(By.xpath("(//*[@class='search-open search-btn'])[1]")).click();
+	}
+	
+	public void usuario_preenche_positivo () {
+		driver.findElement(By.name("s")).click();
+		driver.findElement(By.name("s")).sendKeys("Financas");
+	}
+	
+	public void usuario_clica_pesquisar () {
+		driver.findElement(By.xpath("(//*[@value='Pesquisar'])[1]")).click();
+	}
+	
+	@SuppressWarnings("deprecation")
+	public void valido_busca_encontrada () {
+		//driver.findElement(By.linkText(null))
+	
+	//	driver.getPageSource().contains("Resultado da busca por:");
+	//	driver.getPageSource().contains("bfbfd");
+		WebElement valido = driver.findElement(By.xpath("//*[@class='archive-title']"));
+		Assert.assertEquals("Resultados da busca por: Financas", valido);
+		System.out.println("certo");
+	}
+
+}

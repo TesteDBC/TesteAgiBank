@@ -1,0 +1,43 @@
+package steps;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+import io.cucumber.java.en.*;
+
+public class RealizarPesqNegativaSteps {
+	
+	WebDriver driver;
+	
+	@Given("usuario esta na pagina de inicio")
+	public void usuario_esta_na_pagina_de_inicio() {
+		System.setProperty("webdriver.chrome.driver", "src/test/resources/drivers/chromedriver.exe");
+	    driver = new ChromeDriver();
+	    driver.navigate().to("https://blogdoagi.com.br/");
+	}
+
+	@When("usuario clica na lupa de busca")
+	public void usuario_clica_na_lupa_de_busca() {
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new io.cucumber.java.PendingException();
+	}
+
+	@And("usuario preenche o campo de pesquisas com invalido")
+	public void usuario_preenche_o_campo_de_pesquisas_com_invalido() {
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new io.cucumber.java.PendingException();
+	}
+
+	@And("usuario clica para pesquisar")
+	public void usuario_clica_para_pesquisar() {
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new io.cucumber.java.PendingException();
+	}
+
+	@Then("valido mensagem de erro na pagina")
+	public void valido_mensagem_de_erro_na_pagina() {
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new io.cucumber.java.PendingException();
+	}
+
+}

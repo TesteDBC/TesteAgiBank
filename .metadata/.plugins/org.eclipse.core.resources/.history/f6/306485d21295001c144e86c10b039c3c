@@ -1,0 +1,40 @@
+package logics;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
+
+
+
+public class RealizarPesqPositivaLogics {
+	
+	WebDriver driver;
+	WebDriverWait wait;
+	
+	public RealizarPesqPositivaLogics (WebDriver driver) {
+		this.driver = driver;
+	}
+	
+	public void usuario_clica_lupa () throws InterruptedException {
+		Thread.sleep(2000);
+	//	wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@class=/'search-open search-btn/']")));
+		driver.findElement(By.xpath("//*[@class=/'search-open search-btn/']")).click();
+	}
+	
+	public void usuario_preenche_positivo () {
+		driver.findElement(By.xpath("//*[@placeholder='Pesquisar …']")).sendKeys("Financas");
+	}
+	
+	public void usuario_clica_pesquisar () {
+		driver.findElement(By.xpath("//*[@value='Pesquisar']")).click();
+	}
+	
+	public void valido_busca_encontrada () {
+		//driver.findElement(By.linkText(null))
+		System.out.println("certo");
+		driver.getPageSource().contains("Resultado da pesquisa:");
+	}
+
+}

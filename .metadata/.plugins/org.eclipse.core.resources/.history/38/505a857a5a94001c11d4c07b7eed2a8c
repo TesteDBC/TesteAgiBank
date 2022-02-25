@@ -1,0 +1,36 @@
+package steps;
+
+import io.cucumber.java.en.*;
+
+public class RealizarPesqPositivaSteps {
+	@Given("usuario esta na pagina inicial")
+	public void usuario_esta_na_pagina_inicial() {
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new io.cucumber.java.PendingException();
+	}
+
+	@When("usuario clica na lupa")
+	public void usuario_clica_na_lupa() {
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new io.cucumber.java.PendingException();
+	}
+
+	@When("usuario preenche o campo de pesquisas com finan?as conhecido")
+	public void usuario_preenche_o_campo_de_pesquisas_com_finan_as_conhecido() {
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new io.cucumber.java.PendingException();
+	}
+
+	@When("usuario clica em pesquisar")
+	public void usuario_clica_em_pesquisar() {
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new io.cucumber.java.PendingException();
+	}
+
+	@Then("valido que o elemento foi encontrado")
+	public void valido_que_o_elemento_foi_encontrado() {
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new io.cucumber.java.PendingException();
+	}
+
+}

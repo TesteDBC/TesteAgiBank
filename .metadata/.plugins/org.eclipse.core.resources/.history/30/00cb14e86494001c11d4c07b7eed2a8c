@@ -1,0 +1,43 @@
+package steps;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+import io.cucumber.java.en.*;
+
+public class RealizarPesqPositivaSteps {
+	WebDriver driver;
+	
+	
+	@Given("usuario esta na pagina inicial")
+	public void usuario_esta_na_pagina_inicial() {
+		System.setProperty("webdriver.chrome.driver", "src/test/resources/drivers/chromedriver.exe");
+	    driver = new ChromeDriver();
+	    driver.navigate().to("https://blogdoagi.com.br/");
+	}
+
+	@When("usuario clica na lupa")
+	public void usuario_clica_na_lupa() {
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new io.cucumber.java.PendingException();
+	}
+
+	@When("usuario preenche o campo de pesquisas com financas conhecido")
+	public void usuario_preenche_o_campo_de_pesquisas_com_finan_as_conhecido() {
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new io.cucumber.java.PendingException();
+	}
+
+	@When("usuario clica em pesquisar")
+	public void usuario_clica_em_pesquisar() {
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new io.cucumber.java.PendingException();
+	}
+
+	@Then("valido que o elemento foi encontrado")
+	public void valido_que_o_elemento_foi_encontrado() {
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new io.cucumber.java.PendingException();
+	}
+
+}

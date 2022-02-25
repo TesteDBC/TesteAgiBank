@@ -1,0 +1,18 @@
+@desafio
+Feature: Realizar pesquisa para elemento nao encontrado no site
+ 
+
+  @02
+  Scenario: Realizar pesquisa para elemento nao encontrado no site
+    Given usuario esta na pagina inicial
+    When usuario clica na lupa
+    And usuario preenche o campo de pesquisas com <elemento> conhecido nao encontrado
+    And usuario clica em pesquisar
+    Then valido mensagem de erro na pagina
+
+
+
+    Examples: 
+    
+      | elemento |
+      | njndje   |
